@@ -1,0 +1,58 @@
+# To execute this docker compose yml file use `docker compose -f docker-compose-v3-dynamic-grid.yml up`
+# Add the `-d` flag at the end for detached execution
+# To stop the execution, hit Ctrl+C, and then `docker compose -f docker-compose-v3-dynamic-grid.yml down`
+services:
+  node-docker:
+#    image: selenium/node-chromium:latest
+    platform:  linux/arm64
+    image: selenium/node-docker:4.34.0-20250721
+    env_file:
+      - ./.env
+    depends_on:
+      - selenium-hub
+    volumes:
+#      - ./assets:/opt/selenium/assets
+      - ./config.toml:/opt/selenium/docker.toml
+      - /var/run/docker.sock:/var/run/docker.sock
+#      - ./Downloads:/opt/selenium/downloads
+#      - ./Screenshots:/opt/selenium/screenshots
+#      - ./node-videos:/opt/selenium/videos
+    healthcheck:
+      test: [ "CMD", "/opt/bin/check-grid.sh", "--host", "selenium-hub", "--port", "4444" ]
+
+  selenium-hub:
+    image: selenium/hub:4.34.0-20250721
+    container_name: selenium-hub
+    ports:
+      - "4442:4442"
+      - "4443:4443"
+      - "4444:4444"
+    healthcheck:
+      test: ["CMD", "/opt/bin/check-grid.sh", "--host", "0.0.0.0", "--port", "4444"]
+
+#  video-recorder:
+#    image: selenium/video:ffmpeg-7.1-20250722
+#    container_name:  selenium-video
+#    env_file:
+#      - ./.env.video
+#    depends_on:
+#      - selenium-hub
+#      - node-docker
+#    volumes:
+#      - ./videos:/videos
+#    ports:
+#      - 9000:9000
+#
+#  file_browser:
+#    image: filebrowser/filebrowser:latest
+#    container_name: file_browser
+#    env_file:
+#      - ./.env
+#    restart: always
+#    ports:
+#      - "8081:80"
+#    volumes:
+#      - ./videos:/srv
+#    environment:
+#      - FB_NOAUTH=true
+

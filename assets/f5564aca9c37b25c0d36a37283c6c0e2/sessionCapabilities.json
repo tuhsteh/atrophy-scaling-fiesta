@@ -1,0 +1,43 @@
+{
+  "se:cdpVersion": "137.0.7151.68",
+  "timeouts": {
+    "implicit": 0,
+    "pageLoad": 300000,
+    "script": 30000
+  },
+  "se:vncLocalAddress": "ws:\u002f\u002f172.20.0.5:7900",
+  "goog:chromeOptions": {
+    "debuggerAddress": "localhost:46137"
+  },
+  "se:containerName": "d4d93e0e3eaf",
+  "webauthn:extension:credBlob": true,
+  "acceptInsecureCerts": false,
+  "browserVersion": "137.0.7151.68",
+  "fedcm:accounts": true,
+  "browserName": "chrome",
+  "platformName": "linux",
+  "se:vncEnabled": true,
+  "setWindowRect": true,
+  "webauthn:extension:largeBlob": true,
+  "networkConnectionEnabled": false,
+  "chrome": {
+    "chromedriverVersion": "137.0.7151.68 (2989ffee9373ea8b8623bd98b3cb350a8e95cadc-refs\u002fbranch-heads\u002f7151@{#1873})",
+    "userDataDir": "\u002ftmp\u002f.org.chromium.Chromium.96xDpH"
+  },
+  "pageLoadStrategy": "normal",
+  "unhandledPromptBehavior": "dismiss and notify",
+  "strictFileInteractability": false,
+  "se:forwardCdp": "ws:\u002f\u002f172.20.0.5:4444\u002fsession\u002ff5564aca9c37b25c0d36a37283c6c0e2\u002fse\u002ffwd",
+  "se:vnc": "ws:\u002f\u002f172.20.0.5:4444\u002fsession\u002ff5564aca9c37b25c0d36a37283c6c0e2\u002fse\u002fvnc",
+  "se:cdp": "ws:\u002f\u002f172.20.0.5:4444\u002fsession\u002ff5564aca9c37b25c0d36a37283c6c0e2\u002fse\u002fcdp",
+  "se:bidiEnabled": false,
+  "proxy": {
+  },
+  "webauthn:extension:minPinLength": true,
+  "goog:loggingPrefs": {
+    "browser": "ALL"
+  },
+  "webauthn:extension:prf": true,
+  "se:noVncPort": 7900,
+  "webauthn:virtualAuthenticators": true
+}
