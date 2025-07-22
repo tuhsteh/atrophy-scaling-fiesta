@@ -44,8 +44,6 @@ services:
   file_browser:
     image: filebrowser/filebrowser:v2.41.0-s6
     container_name: file_browser
-#    env_file:
-#      - ./.env
     restart: always
     ports:
       - "8081:80"
