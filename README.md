@@ -1,3 +1,13 @@
+
+Docker is fun.  
+
+![docker buildx build](https://i.imgur.com/CyG7Dfl.png)
+
+
+Anyway, the following is the README from [seleniumHQ/docker-selenium](https://github.com/SeleniumHQ/docker-selenium).  There's also [SeleniARM](https://github.com/seleniumhq-community/docker-seleniarm "Get it?  ARM.  It's very clever.") which might work.  i had a lot of trouble.  i chock it up to personal problems though.  "What is my part in this?"  i spent days making little changes here and there and then losing track of what did or didn't fix things.  _As-salamu alaykum_ if you can make it work for you.
+
+---
+
 [![Build & test](https://github.com/SeleniumHQ/docker-selenium/actions/workflows/build-test.yml/badge.svg)](https://github.com/SeleniumHQ/docker-selenium/actions/workflows/build-test.yml)
 [![Deploys](https://github.com/SeleniumHQ/docker-selenium/actions/workflows/deploy.yml/badge.svg)](https://github.com/SeleniumHQ/docker-selenium/actions/workflows/deploy.yml)
 [![Release Charts](https://github.com/SeleniumHQ/docker-selenium/actions/workflows/helm-chart-release.yml/badge.svg)](https://github.com/SeleniumHQ/docker-selenium/actions/workflows/helm-chart-release.yml)
